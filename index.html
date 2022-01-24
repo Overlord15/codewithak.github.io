@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://i.pinimg.com/564x/49/cd/94/49cd949d1eaa1414f7649eaeb50519b3.jpg"
+    />
+    <title>Codewithak.com</title>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <a class="active" href="index.html">Home</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="contact.html">Contact</a>
+      <a href="social.html">Social Handle</a>
+    </div>
+    <script src="nav.js"></script>
+    <div class="color">
+      <div class="console-container">
+        <span id="text"></span>
+        <div class="console-underscore" id="console">&#95;</div>
+      </div>
+    </div>
+    <script>
+      // function([string1, string2],target id,[color1,color2])
+      consoleText(
+        [
+          "Welcome To Codewithak.com !",
+          "See My Tutorials !",
+          " Keep Supporting !",
+        ],
+        "text",
+        ["lightgreen", "red", "pink"]
+      );
+
+      function consoleText(words, id, colors) {
+        if (colors === undefined) colors = ["#fff"];
+        var visible = true;
+        var con = document.getElementById("console");
+        var letterCount = 1;
+        var x = 1;
+        var waiting = false;
+        var target = document.getElementById(id);
+        target.setAttribute("style", "color:" + colors[0]);
+        window.setInterval(function () {
+          if (letterCount === 0 && waiting === false) {
+            waiting = true;
+            target.innerHTML = words[0].substring(0, letterCount);
+            window.setTimeout(function () {
+              var usedColor = colors.shift();
+              colors.push(usedColor);
+              var usedWord = words.shift();
+              words.push(usedWord);
+              x = 1;
+              target.setAttribute("style", "color:" + colors[0]);
+              letterCount += x;
+              waiting = false;
+            }, 1000);
+          } else if (letterCount === words[0].length + 1 && waiting === false) {
+            waiting = true;
+            window.setTimeout(function () {
+              x = -1;
+              letterCount += x;
+              waiting = false;
+            }, 1000);
+          } else if (waiting === false) {
+            target.innerHTML = words[0].substring(0, letterCount);
+            letterCount += x;
+          }
+        }, 120);
+        window.setInterval(function () {
+          if (visible === true) {
+            con.className = "console-underscore hidden";
+            visible = false;
+          } else {
+            con.className = "console-underscore";
+
+            visible = true;
+          }
+        }, 400);
+      }
+    </script>
+
+    <div class="cards-list">
+      <div class="card 1">
+        <div class="card_image">
+          <img
+            src="https://i.pinimg.com/564x/c2/6a/58/c26a58af112f4cad08629893409f32c5.jpg"
+          />
+        </div>
+        <div class="card_title title-white">
+          <a href="https://www.python.org/downloads/" class="cd">
+            <p>Download Python</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="card 2">
+        <div class="card_image">
+          <img
+            src="https://i.pinimg.com/564x/e2/23/4a/e2234ac9db8b6969be5b60288d9acce3.jpg"
+          />
+        </div>
+        <div class="card_title title-white">
+          <a class="cd" href="https://docs.python.org/3//">
+            <p>Python Doc's</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="card 3">
+        <div class="card_image">
+          <img
+            src="https://i.pinimg.com/564x/e5/9a/52/e59a522e5010613ae986ede14b8916a3.jpg"
+          />
+        </div>
+        <div class="card_title">
+          <a
+            href="https://www.oracle.com/java/technologies/downloads/"
+            class="cd"
+          >
+            <p>JDK Download</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="card 4">
+        <div class="card_image">
+          <img src="https://i.pinimg.com/564x/a3/1b/1d/a31b1d35380af24948f54b42346225f6.jpg" />
+        </div>
+        <div class="card_title title-black">
+          <a
+            href="https://www.oracle.com/java/technologies/javase-jdk17-doc-downloads.html"
+            class="cd"
+          >
+            <p>JDK Doc's</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

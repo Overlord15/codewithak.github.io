@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://i.pinimg.com/originals/08/07/10/0807104b068008a3c3eb403e67d085ec.gif");
+  background-size: cover;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.scene {
+  width: 567px;
+  height: 317px;
+  margin: 40px 0;
+  perspective: 600px;
+  border-radius: 50%;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background-image: url("https://i.pinimg.com/564x/c0/eb/05/c0eb0505426c89dd8e9103be98d6389c.jpg");
+  color: rgba(0, 247, 185, 0.815);
+  border-radius: 50%;
+  width: 567px;
+  height: 317px;
+}
+
+.card__face--back {
+  background-image: url("https://i.pinimg.com/736x/53/89/02/538902761ed79af8bc7103d5cf7ccf77.jpg");
+  border-radius: 50%;
+  width: 567px;
+  height: 317px;
+  transform: rotateY(180deg);
+}
+
+.center {
+  justify-content: center;
+  padding-left: 31%;
+  padding-top: 8%;
+}
+.glow {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.glow2 {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}

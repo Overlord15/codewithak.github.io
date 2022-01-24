@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="google.css" />
+    <link
+      rel="icon"
+      href="https://i.pinimg.com/564x/49/cd/94/49cd949d1eaa1414f7649eaeb50519b3.jpg"
+    />
+    <title>Codewithak | Mail</title>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <a class="active" href="index.html">Home</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="contact.html">Contact</a>
+      <a href="social.html">Social Handle</a>
+    </div>
+    <script src="nav.js"></script>
+    <div class="center">
+      <div class="scene scene--card">
+        <div class="card">
+          <div class="card__face card__face--front glow">Click to view gmail</div>
+          <div class="card__face card__face--back glow2">codewithak.3@gmail.com</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var card = document.querySelector(".card");
+      card.addEventListener("click", function () {
+        card.classList.toggle("is-flipped");
+      });
+    </script>
+  </body>
+</html>
