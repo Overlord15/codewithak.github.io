@@ -205,6 +205,7 @@ button:hover {
 /* LAYOUT CSS*/
 
 .container {
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,4 +220,8 @@ button:hover {
 
 .output {
   grid-column: 1 / span 4;
+}
+
+.active {
+  background-color: lightseagreen;
 }

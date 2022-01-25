@@ -1,24 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+@import url("https://fonts.googleapis.com/css?family=Khula:700");
 body {
   margin: 0;
   font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(-45deg, #37d84c, #2acdd3, #6d30df, #029ae0);
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
-  height: 100vh;
 }
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.active {
+  background-color: lightseagreen;
 }
-
 .header {
   background-color: #f1f1f1;
   padding: 30px;
@@ -63,30 +52,6 @@ body {
 .sticky + .content {
   padding-top: 60px;
 }
-ul {
-  padding: 0px 0px 0px 0px;
-  text-align: center;
-  list-style-type: disc;
-  justify-content: center;
-}
-.center {
-  float: inline-end;
-  padding-top: 15%;
-  justify-content: center;
-}
-.border {
-  border-radius: 15%;
-}
-li {
-  padding: 0% 1%;
-  list-style: none;
-  display: inline-block;
-}
-.icon-size {
-  border-radius: 50%;
-  height: 80px;
-  width: 80px;
-}
 
 .hidden {
   opacity: 0;
@@ -115,12 +80,7 @@ li {
 .color {
   background-color: rgb(63, 80, 83);
 }
-.round-border {
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;
-}
 
 .active {
-  background-color: lightseagreen;
-}
+    background-color: lightseagreen;
+  }
