@@ -5,16 +5,29 @@
 }
 
 body {
-  background-color: #28223f;
   font-family: Montserrat, sans-serif;
-
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-
   min-height: 100vh;
   margin: 0;
+  background: linear-gradient(-45deg, #25be39, #16a5aa, #793ee6, #dd2db1);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.center {
+  justify-content: center;
 }
 
 h3 {
@@ -32,7 +45,9 @@ p {
 }
 
 .card-container {
-  background-color: #231e39;
+  background: linear-gradient(-45deg, #8800e2, #ee8003);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
   border-radius: 5px;
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
   color: #b3b8cd;
@@ -63,10 +78,10 @@ p {
 
 button.primary {
   text-decoration: none;
-  background-color: #03bfcb;
-  border: 1px solid #03bfcb;
+  background-color: transparent;
+  border: 2px solid aliceblue;
   border-radius: 3px;
-  color: #231e39;
+  color: aliceblue;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   padding: 10px 25px;
@@ -74,11 +89,10 @@ button.primary {
 
 button.primary.ghost {
   background-color: transparent;
-  color: #02899c;
+  color: aliceblue;
 }
 
 .skills {
-  background-color: #1f1a36;
   text-align: left;
   padding: 15px;
   margin-top: 30px;
@@ -91,7 +105,8 @@ button.primary.ghost {
 }
 
 .skills ul li {
-  border: 1px solid #2d2747;
+  color: aliceblue;
+  border: 2px solid #f1f1f1;
   border-radius: 2px;
   display: inline-block;
   font-size: 12px;
@@ -128,8 +143,11 @@ footer a {
   padding: 30px;
   text-align: center;
 }
-
+.gap {
+  padding-top: 4.7%;
+}
 #navbar {
+  width: 100%;
   overflow: hidden;
   background-color: #333;
 }
