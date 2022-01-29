@@ -13,15 +13,31 @@
   </head>
 
   <body>
-    <div id="navbar">
-      <a class="active" href="index.html">Home</a>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
       <a href="tutorials.html">Tutorials</a>
       <a href="contact.html">Contact</a>
-      <a href="social.html">Social Handle</a>
-      <a href="calc.html">Calculator</a>
-      <a href="download.html">Download Resource's</a>
+      <a href="social.html" class="active">Social</a>
+      <a href="download.html">Download Resources</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="calc.html">Calculator</a>
+          <!-- <a href="#">Link 2</a>
+          <a href="#">Link 3</a> -->
+        </div>
+      </div>
+      <a
+        href="javascript:void(0);"
+        style="font-size: 15px"
+        class="icon"
+        onclick="myFunction()"
+        >&#9776;</a
+      >
     </div>
-    <script src="nav.js"></script>
     <div class="center">
       <div class="scene scene--card">
         <div class="card">

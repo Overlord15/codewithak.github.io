@@ -9,21 +9,38 @@
       rel="icon"
       href="https://i.pinimg.com/564x/49/cd/94/49cd949d1eaa1414f7649eaeb50519b3.jpg"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Codewithak.com</title>
   </head>
 
   <body>
-    <div id="navbar">
-      <a class="active" href="index.html">Home</a>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
       <a href="tutorials.html">Tutorials</a>
       <a href="contact.html">Contact</a>
-      <a href="social.html">Social Handle</a>
-      <a href="calc.html">Calculator</a>
-      <a href="download.html">Download Resource's</a>
-    </div>
-    <script src="nav.js"></script>
-    <div class="page">
-      <h1 style="text-align: center; padding-top: 13%;font-size: 80px;" class="glow">Under Devlopement</h1>
+      <a href="social.html">Social</a>
+      <a href="download.html">Download Resources</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Dropdown
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="calc.html">Calculator</a>
+          <!-- <a href="#">Link 2</a>
+          <a href="#">Link 3</a> -->
+        </div>
+      </div>
+      <a
+        href="javascript:void(0);"
+        style="font-size: 15px"
+        class="icon"
+        onclick="myFunction()"
+        >&#9776;</a
+      >
     </div>
   </body>
 </html>
