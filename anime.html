@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    
+
     <title>Codewithak.com</title>
   </head>
 
@@ -44,73 +44,59 @@
         >&#9776;</a
       >
     </div>
-
     <div class="slideshow-container">
       <div class="mySlides fade">
-        <a
-          href="https://www1.gogoanime.pe/category/kimetsu-no-yaiba-yuukaku-hen"
-        >
-          <div class="numbertext">1 / 3</div>
-          <img
-            src="https://initiate.alphacoders.com/images/105/cropped-1920-640-1053279.png?537"
-            style="width: 100%"
-          />
-          <div class="text glow">KIMETSU NO YAIBA: YUUKAKU-HEN</div>
-        </a>
+        <div style="font-size: 18px; color: rgb(0, 255, 0); text-shadow: 0 0 3px #FF0000, 0 0 5px #ffd000;" class="numbertext glow">ARIFURETA SHOKUGYOU DE SEKAI SAIKYOU 2ND SEASON</div>
+        <img
+          src="https://initiate.alphacoders.com/images/985/cropped-1920-640-985503.jpg?2832"
+          style="width: 100%"
+        />
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="img_snow_wide.jpg" style="width: 100%" />
-        <div class="text">Caption Two</div>
+        <div style="font-size: 18px; color: rgb(0, 255, 76); text-shadow: 0 0 3px #FF0000, 0 0 5px #ffd000;" class="numbertext glow">KIMETSU NO YAIBA: YUUKAKU-HEN</div>
+        <img
+          src="https://initiate.alphacoders.com/images/105/cropped-1920-640-1053279.png?1874"
+          style="width: 100%"
+        />
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="img_mountains_wide.jpg" style="width: 100%" />
-        <div class="text">Caption Three</div>
+        <div style="font-size: 18px; color: rgb(0, 255, 0); text-shadow: 0 0 3px #FF0000, 0 0 5px #ffd000;" class="numbertext glow">SHINGEKI NO KYOJIN: THE FINAL SEASON PART 2</div>
+        <img
+          src="https://initiate.alphacoders.com/images/607/cropped-1920-640-607718.png?8025"
+          style="width: 100%"
+        />
       </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br />
 
     <div style="text-align: center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
     <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
+      var slideIndex = 0;
+      showSlides();
 
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
+      function showSlides() {
         var i;
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
         }
         for (i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
       }
     </script>
   </body>
