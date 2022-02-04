@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="anime.css" />
+    <link
+      rel="icon"
+      href="https://i.pinimg.com/564x/49/cd/94/49cd949d1eaa1414f7649eaeb50519b3.jpg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+    <title>Codewithak.com</title>
+  </head>
+
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="contact.html">Contact</a>
+      <a href="social.html">Social</a>
+      <a href="download.html">Download Resources</a>
+      <a href="anime.html" class="activee">Anime</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          More
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="anime.html">Anime</a>
+          <a href="calc.html">Calculator</a>
+          <!-- <a href="#">Link 3</a> -->
+        </div>
+      </div>
+      <a
+        href="javascript:void(0);"
+        style="font-size: 15px"
+        class="icon"
+        onclick="myFunction()"
+        >&#9776;</a
+      >
+    </div>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <a
+          href="https://www1.gogoanime.pe/category/kimetsu-no-yaiba-yuukaku-hen"
+        >
+          <div class="numbertext">1 / 3</div>
+          <img
+            src="https://initiate.alphacoders.com/images/105/cropped-1920-640-1053279.png?537"
+            style="width: 100%"
+          />
+          <div class="text glow">KIMETSU NO YAIBA: YUUKAKU-HEN</div>
+        </a>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img_snow_wide.jpg" style="width: 100%" />
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img_mountains_wide.jpg" style="width: 100%" />
+        <div class="text">Caption Three</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
